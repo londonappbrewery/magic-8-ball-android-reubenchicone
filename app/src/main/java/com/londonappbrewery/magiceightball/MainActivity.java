@@ -25,15 +25,15 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.ball4,
                 R.drawable.ball5
         };
-        Button myButton = findViewById(R.id.button);
+
+        Button myButton = findViewById(R.id.askButton);
 
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Random randomNumberGenerator = new Random();
                 int number = randomNumberGenerator.nextInt(5);
-                int imageResourceId = ballArray[number];
-                ballDisplay.setImageResource(imageResourceId);
+                ballDisplay.setImageResource(ballArray[number]);
             }
         });
 
